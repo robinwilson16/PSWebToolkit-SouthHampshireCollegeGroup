@@ -1,0 +1,13 @@
+[safe]
+    directory = *
+    directory = p:/
+    directory = //prowebenrol
+    directory = //prowebenrol/wwwroot
+    directory = p:/prowebenrol
+    directory = p:/prowebenrol/wwwroot
+
+# In the end had to run git config --global --add safe.directory "*"
+
+# Ignore web.dbconfig and web.config
+Web.config
+web.dbconfig

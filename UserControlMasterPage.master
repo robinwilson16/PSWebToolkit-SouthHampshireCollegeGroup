@@ -1,0 +1,2026 @@
+<%@ Master Language="VB" CodeFile="UserControlMasterPage.master.vb" Inherits="UserControlMasterPage" %>
+
+<%@ Register Assembly="PSWebEnrolmentKit" Namespace="CompassCC.ProSolution.PSWebEnrolmentKit"
+    TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head runat="server" id="header">
+
+
+    <link rel="stylesheet" id="defaultlayoutcsscss" href="./support-css-js/style.css" type="text/css" media="all">
+    <link rel="stylesheet" id="customnoscsscss" href="./support-css-js/custom-no-sass.css" type="text/css" media="all">
+    <link rel="stylesheet" id="jetmenupublicstylescss" href="./support-css-js/public.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementoriconscss" href="./support-css-js/elementor-icons.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorfrontendcss" href="./support-css-js/frontend-lite.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="swipercss" href="./support-css-js/swiper.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorpostcss" href="./support-css-js/post-6.css" type="text/css" media="all">
+    <link rel="stylesheet" id="dashiconscss" href="./support-css-js/dashicons.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorprocss" href="./support-css-js/frontend-lite(1).min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorglobalcss" href="./support-css-js/global.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorpost2593css" href="./support-css-js/post-2593.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementorpost109css" href="./support-css-js/post-109.css" type="text/css" media="all">
+    <link rel="stylesheet" id="eaelgeneralcss" href="./support-css-js/general.min.css" type="text/css" media="all">
+
+<%--    <link rel="stylesheet" id="elementoriconsshared0css" href="./support-css-js/fontawesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementoriconsfasolidcss" href="./support-css-js/solid.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementoriconsfabrandscss" href="./support-css-js/brands.min.css" type="text/css" media="all">--%>
+    <style type="text/css">
+        :root {
+            --e-global-color-primary: #6EC1E4 !important;
+            --e-global-color-secondary: #54595F !important;
+            --e-global-color-text: #424242 !important;
+            --e-global-color-accent: #61CE70 !important;
+            --e-global-color-3e35d07: #000000 !important;
+            --e-global-color-3118e1a: #FFFFFF !important;
+            --e-global-color-3aa1c53: #424242 !important;
+            --e-global-color-b7dc6d5: #245CA4 !important;
+            --e-global-color-d514882: #53257A !important;
+            --e-global-color-6978006: #E6E6E6 !important;
+            --e-global-color-246e6ca: #F5F5F5 !important;
+            --e-global-color-fd9ebbd: #424242 !important;
+            --e-global-color-d33fec3: #7BB3E3 !important;
+            --e-global-color-15f3fdd: #E4C001 !important;
+            --e-global-color-203f5bd: #C1C601 !important;
+            --e-global-color-a47f7f2: #8AC299 !important;
+            --e-global-typography-primary-font-family: "Helvetica Neue";
+            --e-global-typography-primary-font-size: 3.2rem;
+            --e-global-typography-primary-font-weight: 700;
+            --e-global-typography-primary-line-height: 1.1;
+            --e-global-typography-secondary-font-family: "Helvetica Neue";
+            --e-global-typography-secondary-font-size: 2rem;
+            --e-global-typography-secondary-font-weight: 700;
+            --e-global-typography-secondary-line-height: 1.2;
+            --e-global-typography-text-font-family: "Helvetica Neue";
+            --e-global-typography-text-font-size: 1.1rem;
+            --e-global-typography-text-font-weight: 400;
+            --e-global-typography-text-line-height: 1.2;
+            --e-global-typography-accent-font-family: "Helvetica Neue";
+            --e-global-typography-accent-font-size: 1.2rem;
+            --e-global-typography-accent-font-weight: 300;
+            --e-global-typography-accent-line-height: 1.2;
+            --e-global-typography-054ae1f-font-family: "Helvetica Neue";
+            --e-global-typography-054ae1f-font-size: 1.2rem;
+            --e-global-typography-054ae1f-font-weight: 700;
+            --e-global-typography-054ae1f-line-height: 1.2;
+            --e-global-typography-958ade1-font-family: "Helvetica Neue";
+            --e-global-typography-958ade1-font-size: 0.85rem;
+            --e-global-typography-958ade1-font-weight: 700;
+            --e-global-typography-958ade1-line-height: 1;
+            --e-global-typography-f0fe518-font-family: "Helvetica Neue";
+            --e-global-typography-f0fe518-font-size: 18px;
+            --e-global-typography-f0fe518-font-weight: 700;
+            --e-global-typography-f0fe518-text-transform: uppercase;
+            --e-global-typography-f0fe518-line-height: 1.2rem;
+            --e-global-typography-458b38c-font-family: "Helvetica Neue";
+            --e-global-typography-458b38c-font-size: 22px;
+            --e-global-typography-458b38c-line-height: 1.2;
+            --e-global-typography-e7512eb-font-family: "Helvetica";
+            --e-global-typography-e7512eb-font-weight: 700;
+            --e-global-typography-e7512eb-line-height: 1.2;
+        }
+
+        .mb-menu-top-level {
+            position: absolute;
+            left: -100% !important;
+            transition: all .3s;
+        }
+
+        .mb-menu-campuses, .mb-menu-centres, .mb-menu-events, .mb-menu-collegelife, .mb-menu-employers {
+            position: absolute;
+            left: 100% !important;
+            transition: all .3s;
+        }
+
+        .mb-centered {
+            left: 0% !important;
+        }
+
+        .jet-mobile-menu-cover {
+            display: none !important;
+        }
+    </style>
+    <%--<script type="text/javascript" src="./support-css-js/jquery.min.js" id="jquery-js"></script>--%>
+    <link rel="icon" href="https://shcg.ac.uk/shcg_staging_mar/wp-content/uploads/2023/07/cropped-SHGC-Favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://shcg.ac.uk/shcg_staging_mar/wp-content/uploads/2023/07/cropped-SHGC-Favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://shcg.ac.uk/shcg_staging_mar/wp-content/uploads/2023/07/cropped-SHGC-Favicon-180x180.png">
+    <meta name="msapplication-TileImage" content="https://shcg.ac.uk/shcg_staging_mar/wp-content/uploads/2023/07/cropped-SHGC-Favicon-270x270.png">
+    <meta name="keywords" content="For all your training needs" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="language" content="en" />
+    <meta name="document-type" content="Public" />
+    <meta name="country" content="uk" />
+    <meta name="url" content="http://www.compasscc.com" />
+    <%--<script src="Scripts/jquery.min.js"></script>--%>
+
+    <title>SHCG College &#124; Applications &amp; Enrolments</title>
+
+
+</head>
+
+<body id="body" runat="server">
+
+
+    <div data-elementor-type="header" data-elementor-id="2593" class="elementor elementor-2593 elementor-location-header" data-elementor-post-type="elementor_library">
+        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-81351f6 e-flex e-con-boxed e-con e-parent" data-id="81351f6" data-element_type="container" id="menu-container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+            <div class="e-con-inner">
+                <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-d6b0e28 e-con-full e-flex e-con e-child animated fadeIn" data-id="d6b0e28" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;animation&quot;:&quot;fadeIn&quot;}">
+                    <div class="elementor-element elementor-element-548fc65 elementor-widget__width-auto elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="548fc65" data-element_type="widget" data-widget_type="theme-site-logo.default">
+                        <div class="elementor-widget-container">
+                            <style>
+                                /*! elementor - v3.19.0 - 07-02-2024 */
+                                .elementor-widget-image {
+                                    text-align: center
+                                }
+
+                                    .elementor-widget-image a {
+                                        display: inline-block
+                                    }
+
+                                        .elementor-widget-image a img[src$=".svg"] {
+                                            width: 48px
+                                        }
+
+                                    .elementor-widget-image img {
+                                        vertical-align: middle;
+                                        display: inline-block
+                                    }
+                            </style>
+                            <a href="https://shcg.ac.uk/shcg_staging_mar">
+                                <img src="./support-css-js/Group-8.svg" class="attachment-full size-full wp-image-22" alt="South Hampshire College Group Logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-e7e9195 e-con-full e-flex e-con e-child" data-id="e7e9195" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                    <div class="elementor-element elementor-element-20868dc elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-jet-mega-menu" data-id="20868dc" data-element_type="widget" data-widget_type="jet-mega-menu.default">
+                        <div class="elementor-widget-container">
+                            <div class="jet-mega-menu jet-mega-menu--layout-horizontal jet-mega-menu--sub-position-right jet-mega-menu--dropdown-layout-default jet-mega-menu--dropdown-position-right jet-mega-menu--animation-fade jet-mega-menu--location-elementor jet-mega-menu--inited" data-settings="{&quot;menuId&quot;:&quot;21&quot;,&quot;menuUniqId&quot;:&quot;662b7608dbb5b&quot;,&quot;rollUp&quot;:false,&quot;megaAjaxLoad&quot;:false,&quot;layout&quot;:&quot;horizontal&quot;,&quot;subEvent&quot;:&quot;click&quot;,&quot;mouseLeaveDelay&quot;:500,&quot;subTrigger&quot;:&quot;item&quot;,&quot;subPosition&quot;:&quot;right&quot;,&quot;megaWidthType&quot;:&quot;container&quot;,&quot;megaWidthSelector&quot;:&quot;&quot;,&quot;breakpoint&quot;:0}">
+                                <div class="jet-mega-menu-toggle" role="button" tabindex="0" aria-label="Open/Close Menu">
+                                    <div class="jet-mega-menu-toggle-icon jet-mega-menu-toggle-icon--default-state"><i class="fas fa-bars"></i></div>
+                                    <div class="jet-mega-menu-toggle-icon jet-mega-menu-toggle-icon--opened-state"><i class="fas fa-times"></i></div>
+                                </div>
+                                <nav class="jet-mega-menu-container" aria-label="Main nav">
+                                    <ul class="jet-mega-menu-list">
+                                        <li id="jet-mega-menu-item-4444" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-4444">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Home">
+                                                <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Home</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-2665" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item-has-children jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-2665">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Campuses">
+                                                <a href="#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Campuses</div>
+                                                    </div>
+                                                </a>
+                                                <div class="jet-mega-menu-item__dropdown"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                            <div class="jet-mega-menu-sub-menu">
+                                                <ul class="jet-mega-menu-sub-menu__list">
+                                                    <li id="jet-mega-menu-item-2584" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2584">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Our Mission &amp; Values">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Our Mission &amp; Values</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2666" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2666">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Campuses">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Campuses</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-3193" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-3193">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Restaurants &amp; Salons">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Restaurants &amp; Salons</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-4445" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-4445">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Study">
+                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Study</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-4449" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item-has-children jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-4449">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Centres of Excellence">
+                                                <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Centres of Excellence</div>
+                                                    </div>
+                                                </a>
+                                                <div class="jet-mega-menu-item__dropdown"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                            <div class="jet-mega-menu-sub-menu">
+                                                <ul class="jet-mega-menu-sub-menu__list">
+                                                    <li id="jet-mega-menu-item-4448" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4448">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Institute of Technology">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Institute of Technology</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-4451" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4451">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="CEMAST">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">CEMAST</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-4452" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4452">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="CTEC">
+                                                            <a href="https://shcg.ac.uk/shcg_staging_mar/iframe-test/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">CTEC</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-4453" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4453">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Marine Skills Centre">
+                                                            <a href="https://shcg.ac.uk/shcg_staging_mar/iframe-test/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Marine Skills Centre</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-2586" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item-has-children jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-2586">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Events">
+                                                <a href="#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Events</div>
+                                                    </div>
+                                                </a>
+                                                <div class="jet-mega-menu-item__dropdown"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                            <div class="jet-mega-menu-sub-menu">
+                                                <ul class="jet-mega-menu-sub-menu__list">
+                                                    <li id="jet-mega-menu-item-2657" class="jet-mega-menu-item jet-mega-menu-item-type-post_type jet-mega-menu-item-object-page jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2657">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="News">
+                                                            <a href="https://shcg.ac.uk/shcg_staging_mar/news/" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">News</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2658" class="jet-mega-menu-item jet-mega-menu-item-type-post_type jet-mega-menu-item-object-page jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2658">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Events">
+                                                            <a href="https://shcg.ac.uk/shcg_staging_mar/events/" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Events</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-4446" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item-has-children jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-4446">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="College Life">
+                                                <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">College Life</div>
+                                                    </div>
+                                                </a>
+                                                <div class="jet-mega-menu-item__dropdown"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                            <div class="jet-mega-menu-sub-menu">
+                                                <ul class="jet-mega-menu-sub-menu__list">
+                                                    <li id="jet-mega-menu-item-4455" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4455">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="College Life">
+                                                            <a href="#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">College Life</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-4447" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-4447">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Student Support">
+                                                            <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Student Support</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-2660" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item-has-children jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-2660">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Employers">
+                                                <a href="https://shcg.ac.uk/employer-partnerships/" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Employers</div>
+                                                    </div>
+                                                </a>
+                                                <div class="jet-mega-menu-item__dropdown"><i class="fa-solid fa-caret-down"></i></div>
+                                            </div>
+                                            <div class="jet-mega-menu-sub-menu">
+                                                <ul class="jet-mega-menu-sub-menu__list">
+                                                    <li id="jet-mega-menu-item-3503" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-3503">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="View All">
+                                                            <a href="https://shcg.ac.uk/employer-partnerships/" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">View All</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2588" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2588">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Business Plus">
+                                                            <a href="https://shcg.ac.uk/employer-partnerships/#business-plus" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Business Plus</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2661" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2661">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Apprenticeships">
+                                                            <a href="https://shcg.ac.uk/employer-partnerships/#apprenticeships" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Apprenticeships</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2664" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2664">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="South Coast Institute of Technology">
+                                                            <a href="https://shcg.ac.uk/employer-partnerships/#south-coast-iot" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">South Coast Institute of Technology</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                    <li id="jet-mega-menu-item-2662" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--sub-level jet-mega-menu-item-2662">
+                                                        <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Engage with us">
+                                                            <a href="https://shcg.ac.uk/employer-partnerships/#contact-us" class="jet-mega-menu-item__link jet-mega-menu-item__link--sub-level">
+                                                                <div class="jet-mega-menu-item__title">
+                                                                    <div class="jet-mega-menu-item__label">Engage with us</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-2667" class="jet-mega-menu-item jet-mega-menu-item-type-post_type jet-mega-menu-item-object-page jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-2667">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Join Us">
+                                                <a href="https://shcg.ac.uk/shcg_staging_mar/careers-at-shcg/" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Join Us</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li id="jet-mega-menu-item-4450" class="jet-mega-menu-item jet-mega-menu-item-type-custom jet-mega-menu-item-object-custom jet-mega-menu-item--default jet-mega-menu-item--top-level jet-mega-menu-item-4450">
+                                            <div class="jet-mega-menu-item__inner" tabindex="0" aria-label="Contact">
+                                                <a href="https://https://www.shcg.ac.uk/#" class="jet-mega-menu-item__link jet-mega-menu-item__link--top-level">
+                                                    <div class="jet-mega-menu-item__title">
+                                                        <div class="jet-mega-menu-item__label">Contact</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-9b715cc elementor-hidden-desktop elementor-widget elementor-widget-jet-mobile-menu" data-id="9b715cc" data-element_type="widget" data-widget_type="jet-mobile-menu.default">
+                        <div class="elementor-widget-container">
+                            <div id="jet-mobile-menu">
+                                <div class="jet-mobile-menu__instance jet-mobile-menu__instance--slide-out-layout left-container-position default-toggle-position">
+                                    <div id="mb-mobile" role="button" tabindex="0" aria-label="Open/Close Menu" aria-expanded="false" class="jet-mobile-menu__toggle">
+                                        <div class="jet-mobile-menu__toggle-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18">
+                                                <path id="Icon_material-menu" data-name="Icon material-menu" d="M4.5,27h27V24H4.5Zm0-7.5h27v-3H4.5ZM4.5,9v3h27V9Z" transform="translate(-4.5 -9)"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="jet-mobile-menu-cover" style="top: 88px;"></div>
+                                    <div class="jet-mobile-menu__container mb-menu-top-level" style="top: 88px; height: calc(100% - 88px);">
+                                        <div class="jet-mobile-menu__container-inner">
+                                            <div class="jet-mobile-menu__controls">
+                                                <div class="jet-mobile-menu__breadcrumbs ">
+                                                    <div class="jet-mobile-menu__breadcrumb"></div>
+                                                </div>
+                                                <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-menu-toplevel-back"><i class="fas fa-times"></i></div>
+                                            </div>
+                                            <div class="jet-mobile-menu__body">
+                                                <div role="navigation" class="jet-mobile-menu__list">
+                                                    <ul class="jet-mobile-menu__items">
+                                                        <li id="jet-mobile-menu-item-4444" class="jet-mobile-menu__item jet-menu-item-4444 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Home" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Home</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Campuses</span> </div>
+                                                                    </div>
+                                                                </a><span class="jet-dropdown-arrow mb-show-campuses"><i class="fas fa-arrow-right"></i></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4445" class="jet-mobile-menu__item jet-menu-item-4445 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Study" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Study</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4449" class="jet-mobile-menu__item jet-menu-item-4449 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Centres of Excellence" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Centres of Excellence</span> </div>
+                                                                    </div>
+                                                                </a><span class="jet-dropdown-arrow mb-show-centres"><i class="fas fa-arrow-right"></i></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2586" class="jet-mobile-menu__item jet-menu-item-2586 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Events" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Events</span> </div>
+                                                                    </div>
+                                                                </a><span class="jet-dropdown-arrow mb-show-events"><i class="fas fa-arrow-right"></i></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4446" class="jet-mobile-menu__item jet-menu-item-4446 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="College Life" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">College Life</span> </div>
+                                                                    </div>
+                                                                </a><span class="jet-dropdown-arrow mb-show-collegelife"><i class="fas fa-arrow-right"></i></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2660" class="jet-mobile-menu__item jet-menu-item-2660 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Employers" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="/employer-partnerships/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name "><span class="jet-menu-label">Employers</span> </div>
+                                                                    </div>
+                                                                </a><span class="jet-dropdown-arrow mb-show-employers"><i class="fas fa-arrow-right"></i></span>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2667" class="jet-mobile-menu__item jet-menu-item-2667 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Join Us" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/careers-at-shcg/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Join Us</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4450" class="jet-mobile-menu__item jet-menu-item-4450 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Contact" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Contact</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="jet-mobile-menu__after-template">
+                                                <div class="jet-mobile-menu__after-template-content">
+                                                    <style>
+                                                        .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                            --display: flex;
+                                                            --background-transition: 0.3s;
+                                                            --margin-block-start: 0px;
+                                                            --margin-block-end: 0px;
+                                                            --margin-inline-start: 0px;
+                                                            --margin-inline-end: 0px;
+                                                            --padding-block-start: 0px;
+                                                            --padding-block-end: 0px;
+                                                            --padding-inline-start: 0px;
+                                                            --padding-inline-end: 0px;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                background-color: var( --e-global-color-3e35d07 );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                background-color: var( --e-global-color-fd9ebbd );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                --border-transition: 0.3s;
+                                                            }
+
+                                                        .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                            text-align: center;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                color: var( --e-global-color-3118e1a );
+                                                                font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                padding: 20px 20px 20px 20px;
+                                                            }
+
+                                                        @media(max-width:1024px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+
+                                                        @media(max-width:767px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+                                                    </style>
+                                                    <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                        <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                            <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <style>
+                                                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                        .elementor-heading-title {
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            line-height: 1
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                            color: inherit;
+                                                                            font-size: inherit;
+                                                                            line-height: inherit
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                            font-size: 15px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                            font-size: 19px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                            font-size: 29px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                            font-size: 39px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                            font-size: 59px
+                                                                        }
+                                                                    </style>
+                                                                    <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!---Campuses-->
+
+                                    <div class="jet-mobile-menu__container mb-menu-centres" style="top: 88px; height: calc(100% - 88px);">
+                                        <div class="jet-mobile-menu__container-inner">
+                                            <div class="jet-mobile-menu__controls">
+                                                <div class="jet-mobile-menu__breadcrumbs ">
+                                                    <div class="jet-mobile-menu__breadcrumb">
+                                                        <div class="breadcrumb-label">Centres of Excellence</div>
+                                                    </div>
+                                                </div>
+                                                <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-centres-back"><i class="fas fa-arrow-left"></i></div>
+                                            </div>
+                                            <div class="jet-mobile-menu__body">
+                                                <div role="navigation" class="jet-mobile-menu__list">
+                                                    <ul class="jet-mobile-menu__items">
+
+                                                        <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">South Coast Institute of Technology </span></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4445" class="jet-mobile-menu__item jet-menu-item-4445 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Study" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">CEMAST</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4445" class="jet-mobile-menu__item jet-menu-item-4445 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Study" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">CTEC</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4445" class="jet-mobile-menu__item jet-menu-item-4445 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Study" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Marine Skills Centres</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="jet-mobile-menu__after-template">
+                                                <div class="jet-mobile-menu__after-template-content">
+                                                    <style>
+                                                        .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                            --display: flex;
+                                                            --background-transition: 0.3s;
+                                                            --margin-block-start: 0px;
+                                                            --margin-block-end: 0px;
+                                                            --margin-inline-start: 0px;
+                                                            --margin-inline-end: 0px;
+                                                            --padding-block-start: 0px;
+                                                            --padding-block-end: 0px;
+                                                            --padding-inline-start: 0px;
+                                                            --padding-inline-end: 0px;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                background-color: var( --e-global-color-3e35d07 );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                background-color: var( --e-global-color-fd9ebbd );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                --border-transition: 0.3s;
+                                                            }
+
+                                                        .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                            text-align: center;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                color: var( --e-global-color-3118e1a );
+                                                                font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                padding: 20px 20px 20px 20px;
+                                                            }
+
+                                                        @media(max-width:1024px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+
+                                                        @media(max-width:767px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+                                                    </style>
+                                                    <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                        <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                            <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <style>
+                                                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                        .elementor-heading-title {
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            line-height: 1
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                            color: inherit;
+                                                                            font-size: inherit;
+                                                                            line-height: inherit
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                            font-size: 15px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                            font-size: 19px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                            font-size: 29px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                            font-size: 39px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                            font-size: 59px
+                                                                        }
+                                                                    </style>
+                                                                    <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- End Campuses -->
+
+                                    <!---Centres-->
+
+                                    <div class="jet-mobile-menu__container mb-menu-campuses" style="top: 88px; height: calc(100% - 88px);">
+                                        <div class="jet-mobile-menu__container-inner">
+                                            <div class="jet-mobile-menu__controls">
+                                                <div class="jet-mobile-menu__breadcrumbs ">
+                                                    <div class="jet-mobile-menu__breadcrumb">
+                                                        <div class="breadcrumb-label">Campuses</div>
+                                                    </div>
+                                                </div>
+                                                <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-campuses-back"><i class="fas fa-arrow-left"></i></div>
+                                            </div>
+                                            <div class="jet-mobile-menu__body">
+                                                <div role="navigation" class="jet-mobile-menu__list">
+                                                    <ul class="jet-mobile-menu__items">
+                                                        <li id="jet-mobile-menu-item-4444" class="jet-mobile-menu__item jet-menu-item-4444 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Home" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Our Mission &amp; Values</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Campuses</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-4445" class="jet-mobile-menu__item jet-menu-item-4445 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Study" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://shcg.ac.uk/shcg_staging_mar/course-serach-page/" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Restaurants &amp; Salons</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="jet-mobile-menu__after-template">
+                                                <div class="jet-mobile-menu__after-template-content">
+                                                    <style>
+                                                        .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                            --display: flex;
+                                                            --background-transition: 0.3s;
+                                                            --margin-block-start: 0px;
+                                                            --margin-block-end: 0px;
+                                                            --margin-inline-start: 0px;
+                                                            --margin-inline-end: 0px;
+                                                            --padding-block-start: 0px;
+                                                            --padding-block-end: 0px;
+                                                            --padding-inline-start: 0px;
+                                                            --padding-inline-end: 0px;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                background-color: var( --e-global-color-3e35d07 );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                background-color: var( --e-global-color-fd9ebbd );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                --border-transition: 0.3s;
+                                                            }
+
+                                                        .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                            text-align: center;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                color: var( --e-global-color-3118e1a );
+                                                                font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                padding: 20px 20px 20px 20px;
+                                                            }
+
+                                                        @media(max-width:1024px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+
+                                                        @media(max-width:767px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+                                                    </style>
+                                                    <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                        <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                            <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <style>
+                                                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                        .elementor-heading-title {
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            line-height: 1
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                            color: inherit;
+                                                                            font-size: inherit;
+                                                                            line-height: inherit
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                            font-size: 15px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                            font-size: 19px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                            font-size: 29px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                            font-size: 39px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                            font-size: 59px
+                                                                        }
+                                                                    </style>
+                                                                    <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- End Centres -->
+
+                                    <!---Events-->
+
+                                    <div class="jet-mobile-menu__container mb-menu-events" style="top: 88px; height: calc(100% - 88px);">
+                                        <div class="jet-mobile-menu__container-inner">
+                                            <div class="jet-mobile-menu__controls">
+                                                <div class="jet-mobile-menu__breadcrumbs ">
+                                                    <div class="jet-mobile-menu__breadcrumb">
+                                                        <div class="breadcrumb-label">Events</div>
+                                                    </div>
+                                                </div>
+                                                <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-events-back"><i class="fas fa-arrow-left"></i></div>
+                                            </div>
+                                            <div class="jet-mobile-menu__body">
+                                                <div role="navigation" class="jet-mobile-menu__list">
+                                                    <ul class="jet-mobile-menu__items">
+                                                        <li id="jet-mobile-menu-item-4444" class="jet-mobile-menu__item jet-menu-item-4444 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Home" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">News</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+                                                        <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                            <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                <a href="#" class="mobile-link mobile-top-level-link">
+                                                                    <div class="jet-menu-item-wrapper">
+                                                                        <div class="jet-menu-name"><span class="jet-menu-label">Events</span> </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="jet-mobile-menu__after-template">
+                                                <div class="jet-mobile-menu__after-template-content">
+                                                    <style>
+                                                        .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                            --display: flex;
+                                                            --background-transition: 0.3s;
+                                                            --margin-block-start: 0px;
+                                                            --margin-block-end: 0px;
+                                                            --margin-inline-start: 0px;
+                                                            --margin-inline-end: 0px;
+                                                            --padding-block-start: 0px;
+                                                            --padding-block-end: 0px;
+                                                            --padding-inline-start: 0px;
+                                                            --padding-inline-end: 0px;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                background-color: var( --e-global-color-3e35d07 );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                background-color: var( --e-global-color-fd9ebbd );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                --border-transition: 0.3s;
+                                                            }
+
+                                                        .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                            text-align: center;
+                                                        }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                color: var( --e-global-color-3118e1a );
+                                                                font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                padding: 20px 20px 20px 20px;
+                                                            }
+
+                                                        @media(max-width:1024px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+
+                                                        @media(max-width:767px) {
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                            }
+                                                        }
+                                                    </style>
+                                                    <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                        <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                            <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <style>
+                                                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                        .elementor-heading-title {
+                                                                            padding: 0;
+                                                                            margin: 0;
+                                                                            line-height: 1
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                            color: inherit;
+                                                                            font-size: inherit;
+                                                                            line-height: inherit
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                            font-size: 15px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                            font-size: 19px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                            font-size: 29px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                            font-size: 39px
+                                                                        }
+
+                                                                        .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                            font-size: 59px
+                                                                        }
+                                                                    </style>
+                                                                    <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- End Events -->
+
+                                        <!---College Life-->
+
+                                        <div class="jet-mobile-menu__container mb-menu-collegelife" style="top: 88px; height: calc(100% - 88px);">
+                                            <div class="jet-mobile-menu__container-inner">
+                                                <div class="jet-mobile-menu__controls">
+                                                    <div class="jet-mobile-menu__breadcrumbs ">
+                                                        <div class="jet-mobile-menu__breadcrumb">
+                                                            <div class="breadcrumb-label">College Life</div>
+                                                        </div>
+                                                    </div>
+                                                    <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-collegelife-back"><i class="fas fa-arrow-left"></i></div>
+                                                </div>
+                                                <div class="jet-mobile-menu__body">
+                                                    <div role="navigation" class="jet-mobile-menu__list">
+                                                        <ul class="jet-mobile-menu__items">
+                                                            <li id="jet-mobile-menu-item-4444" class="jet-mobile-menu__item jet-menu-item-4444 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Home" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">College Life</span></div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">Student Support</span> </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="jet-mobile-menu__after-template">
+                                                    <div class="jet-mobile-menu__after-template-content">
+                                                        <style>
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                                --display: flex;
+                                                                --background-transition: 0.3s;
+                                                                --margin-block-start: 0px;
+                                                                --margin-block-end: 0px;
+                                                                --margin-inline-start: 0px;
+                                                                --margin-inline-end: 0px;
+                                                                --padding-block-start: 0px;
+                                                                --padding-block-end: 0px;
+                                                                --padding-inline-start: 0px;
+                                                                --padding-inline-end: 0px;
+                                                            }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                    background-color: var( --e-global-color-3e35d07 );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                    background-color: var( --e-global-color-fd9ebbd );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                    --border-transition: 0.3s;
+                                                                }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                                text-align: center;
+                                                            }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    color: var( --e-global-color-3118e1a );
+                                                                    font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                    text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                    padding: 20px 20px 20px 20px;
+                                                                }
+
+                                                            @media(max-width:1024px) {
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+                                                            }
+
+                                                            @media(max-width:767px) {
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+                                                            }
+                                                        </style>
+                                                        <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                            <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                                <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <style>
+                                                                            /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                            .elementor-heading-title {
+                                                                                padding: 0;
+                                                                                margin: 0;
+                                                                                line-height: 1
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                                color: inherit;
+                                                                                font-size: inherit;
+                                                                                line-height: inherit
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                                font-size: 15px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                                font-size: 19px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                                font-size: 29px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                                font-size: 39px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                                font-size: 59px
+                                                                            }
+                                                                        </style>
+                                                                        <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- End College Life -->
+
+                                        <!---Employers-->
+
+                                        <div class="jet-mobile-menu__container mb-menu-employers" style="top: 88px; height: calc(100% - 88px);">
+                                            <div class="jet-mobile-menu__container-inner">
+                                                <div class="jet-mobile-menu__controls">
+                                                    <div class="jet-mobile-menu__breadcrumbs ">
+                                                        <div class="jet-mobile-menu__breadcrumb">
+                                                            <div class="breadcrumb-label">Employers</div>
+                                                        </div>
+                                                    </div>
+                                                    <div role="button" tabindex="0" aria-label="Back to Prev Items" aria-expanded="false" class="jet-mobile-menu__back mb-employers-back"><i class="fas fa-arrow-left"></i></div>
+                                                </div>
+                                                <div class="jet-mobile-menu__body">
+                                                    <div role="navigation" class="jet-mobile-menu__list">
+                                                        <ul class="jet-mobile-menu__items">
+                                                            <li id="jet-mobile-menu-item-4444" class="jet-mobile-menu__item jet-menu-item-4444 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Home" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="https://#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">View All</span> </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">Business Plus</span> </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">Apprenticeships</span> </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">South Coast Institute of Technology </span></div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+                                                            <li id="jet-mobile-menu-item-2665" class="jet-mobile-menu__item jet-menu-item-2665 jet-mobile-menu__item--sub-trigger-item">
+                                                                <div tabindex="0" aria-label="Campuses" aria-expanded="false" class="jet-mobile-menu__item-inner">
+                                                                    <a href="#" class="mobile-link mobile-top-level-link">
+                                                                        <div class="jet-menu-item-wrapper">
+                                                                            <div class="jet-menu-name"><span class="jet-menu-label">Engage with us</span> </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="jet-mobile-menu__after-template">
+                                                    <div class="jet-mobile-menu__after-template-content">
+                                                        <style>
+                                                            .elementor-2633 .elementor-element.elementor-element-2fb4da4 {
+                                                                --display: flex;
+                                                                --background-transition: 0.3s;
+                                                                --margin-block-start: 0px;
+                                                                --margin-block-end: 0px;
+                                                                --margin-inline-start: 0px;
+                                                                --margin-inline-end: 0px;
+                                                                --padding-block-start: 0px;
+                                                                --padding-block-end: 0px;
+                                                                --padding-inline-start: 0px;
+                                                                --padding-inline-end: 0px;
+                                                            }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4:not(.elementor-motion-effects-element-type-background), .elementor-2633 .elementor-element.elementor-element-2fb4da4 > .elementor-motion-effects-container > .elementor-motion-effects-layer {
+                                                                    background-color: var( --e-global-color-3e35d07 );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4:hover {
+                                                                    background-color: var( --e-global-color-fd9ebbd );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-2fb4da4, .elementor-2633 .elementor-element.elementor-element-2fb4da4::before {
+                                                                    --border-transition: 0.3s;
+                                                                }
+
+                                                            .elementor-2633 .elementor-element.elementor-element-9c9aa45 {
+                                                                text-align: center;
+                                                            }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    color: var( --e-global-color-3118e1a );
+                                                                    font-family: var( --e-global-typography-f0fe518-font-family ), Sans-serif;
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    font-weight: var( --e-global-typography-f0fe518-font-weight );
+                                                                    text-transform: var( --e-global-typography-f0fe518-text-transform );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 > .elementor-widget-container {
+                                                                    padding: 20px 20px 20px 20px;
+                                                                }
+
+                                                            @media(max-width:1024px) {
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+                                                            }
+
+                                                            @media(max-width:767px) {
+                                                                .elementor-2633 .elementor-element.elementor-element-9c9aa45 .elementor-heading-title {
+                                                                    font-size: var( --e-global-typography-f0fe518-font-size );
+                                                                    line-height: var( --e-global-typography-f0fe518-line-height );
+                                                                    letter-spacing: var( --e-global-typography-f0fe518-letter-spacing );
+                                                                    word-spacing: var( --e-global-typography-f0fe518-word-spacing );
+                                                                }
+                                                            }
+                                                        </style>
+                                                        <div data-elementor-type="section" data-elementor-id="2633" class="elementor elementor-2633 elementor-location-header" data-elementor-post-type="elementor_library">
+                                                            <a data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2fb4da4 e-con-full contact-us-button e-flex e-con e-parent" data-id="2fb4da4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;,&quot;background_background&quot;:&quot;classic&quot;}" data-core-v316-plus="true" href="https://shcg.ac.uk/shcg_staging_mar/contact-us/">
+                                                                <div class="elementor-element elementor-element-9c9aa45 elementor-widget elementor-widget-heading" data-id="9c9aa45" data-element_type="widget" data-widget_type="heading.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <style>
+                                                                            /*! elementor - v3.19.0 - 07-02-2024 */
+                                                                            .elementor-heading-title {
+                                                                                padding: 0;
+                                                                                margin: 0;
+                                                                                line-height: 1
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title[class*=elementor-size-] > a {
+                                                                                color: inherit;
+                                                                                font-size: inherit;
+                                                                                line-height: inherit
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-small {
+                                                                                font-size: 15px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-medium {
+                                                                                font-size: 19px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-large {
+                                                                                font-size: 29px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xl {
+                                                                                font-size: 39px
+                                                                            }
+
+                                                                            .elementor-widget-heading .elementor-heading-title.elementor-size-xxl {
+                                                                                font-size: 59px
+                                                                            }
+                                                                        </style>
+                                                                        <p class="elementor-heading-title elementor-size-default">Contact Us</p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- End Employers -->
+
+
+                                    </div>
+                                    <div class="jet-mobile-menu__refs">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18">
+                                                <path id="Iconmaterialmenu" data-name="Icon material-menu" d="M4.5,27h27V24H4.5Zm0-7.5h27v-3H4.5ZM4.5,9v3h27V9Z" transform="translate(-4.5 -9)"></path>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18">
+                                                <path id="Iconterialenu" data-name="Icon material-menu" d="M4.5,27h27V24H4.5Zm0-7.5h27v-3H4.5ZM4.5,9v3h27V9Z" transform="translate(-4.5 -9)"></path>
+                                            </svg>
+                                        </div>
+                                        <div><i class="fas fa-times"></i></div>
+                                        <div><i class="fas fa-arrow-left"></i></div>
+                                        <div><i class="fas fa-arrow-right"></i></div>
+                                        <div><i class="fas fa-arrow-down"></i></div>
+                                        <div><i class="fas fa-arrow-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form id="form1" runat="server">
+
+        <div style='display: none;'>
+            Style sheets must be enabled to view this page as it was intended.
+        </div>
+
+        <div class="containerbody">
+            <div class="body-content" id="content">
+                <asp:ContentPlaceHolder ID="MainContentPlaceholder" runat="server">
+                </asp:ContentPlaceHolder>
+
+
+
+            </div>
+        </div>
+
+    </form>
+
+
+
+
+    <div data-elementor-type="footer" data-elementor-id="109" class="elementor elementor-109 elementor-location-footer" data-elementor-post-type="elementor_library">
+        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-47bef4f e-flex e-con-boxed e-con e-parent" data-id="47bef4f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+            <div class="e-con-inner">
+                <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-2083ea6 e-con-full e-flex e-con e-child" data-id="2083ea6" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                    <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-f854953 e-con-full e-flex e-con e-child" data-id="f854953" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-b3152ed e-con-full e-flex e-con e-child" data-id="b3152ed" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                            <div class="elementor-element elementor-element-ca0b270 dce_masking-none elementor-widget elementor-widget-image" data-id="ca0b270" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <a href="https://shcg.ac.uk/">
+                                        <img width="1" height="1" src="./support-css-js/Group-29.svg" class="attachment-large size-large wp-image-54" alt="South Hampshire College Group Logo in White">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-f1b4cf1 e-con-full e-flex e-con e-child" data-id="f1b4cf1" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                            <div class="elementor-element elementor-element-b762d31 elementor-nav-menu--dropdown-none elementor-widget__width-inherit elementor-widget elementor-widget-nav-menu" data-id="b762d31" data-element_type="widget" id="footer-menu" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;<i class=\&quot;\&quot;><\/i>&quot;,&quot;library&quot;:&quot;&quot;}}" data-widget_type="nav-menu.default">
+                                <div class="elementor-widget-container">
+                                    <link rel="stylesheet" href="./support-css-js/widget-nav-menu.min.css">
+                                    <nav class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-underline e--animation-fade">
+                                        <ul id="menu-1-b762d31" class="elementor-nav-menu sm-vertical" data-smartmenus-id="17141242974820793">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"><a href="https://shcg.ac.uk/shcg_staging_mar/careers-at-shcg/" class="elementor-item">Careers</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://shcg.ac.uk/shcg_staging_mar/policies/" class="elementor-item">Policies</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="https://shcg.ac.uk/shcg_staging_mar/governance/" class="elementor-item">Governance</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-446"><a href="https://shcg.ac.uk/shcg_staging_mar/contact-us/" class="elementor-item">Contact Us</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1251"><a href="https://shcg.ac.uk/shcg_staging_mar/news/" class="elementor-item">News</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="https://shcg.ac.uk/shcg_staging_mar/events/" class="elementor-item">Events</a></li>
+                                        </ul>
+                                    </nav>
+                                    <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+                                        <ul id="menu-2-b762d31" class="elementor-nav-menu sm-vertical" data-smartmenus-id="17141242974826736">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394"><a href="https://shcg.ac.uk/shcg_staging_mar/careers-at-shcg/" class="elementor-item" tabindex="-1">Careers</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-393"><a href="https://shcg.ac.uk/shcg_staging_mar/policies/" class="elementor-item" tabindex="-1">Policies</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1209"><a href="https://shcg.ac.uk/shcg_staging_mar/governance/" class="elementor-item" tabindex="-1">Governance</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-446"><a href="https://shcg.ac.uk/shcg_staging_mar/contact-us/" class="elementor-item" tabindex="-1">Contact Us</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1251"><a href="https://shcg.ac.uk/shcg_staging_mar/news/" class="elementor-item" tabindex="-1">News</a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1252"><a href="https://shcg.ac.uk/shcg_staging_mar/events/" class="elementor-item" tabindex="-1">Events</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-5d546a3 e-con-full e-flex e-con e-child" data-id="5d546a3" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                            <div class="elementor-element elementor-element-c1dd7a5 elementor-widget elementor-widget-text-editor" data-id="c1dd7a5" data-element_type="widget" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <style>
+                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                        .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap {
+                                            background-color: #69727d;
+                                            color: #fff
+                                        }
+
+                                        .elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap {
+                                            color: #69727d;
+                                            border: 3px solid;
+                                            background-color: transparent
+                                        }
+
+                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap {
+                                            margin-top: 8px
+                                        }
+
+                                        .elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter {
+                                            width: 1em;
+                                            height: 1em
+                                        }
+
+                                        .elementor-widget-text-editor .elementor-drop-cap {
+                                            float: left;
+                                            text-align: center;
+                                            line-height: 1;
+                                            font-size: 50px
+                                        }
+
+                                        .elementor-widget-text-editor .elementor-drop-cap-letter {
+                                            display: inline-block
+                                        }
+                                    </style>
+                                    <p>Bishopsfield Road, Fareham PO14 1NH</p>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-34b8d75 elementor-shape-circle e-grid-align-left e-grid-align-mobile-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="34b8d75" data-element_type="widget" data-widget_type="social-icons.default">
+                                <div class="elementor-widget-container">
+                                    <style>
+                                        /*! elementor - v3.19.0 - 07-02-2024 */
+                                        .elementor-widget-social-icons.elementor-grid-0 .elementor-widget-container, .elementor-widget-social-icons.elementor-grid-mobile-0 .elementor-widget-container, .elementor-widget-social-icons.elementor-grid-tablet-0 .elementor-widget-container {
+                                            line-height: 1;
+                                            font-size: 0
+                                        }
+
+                                        .elementor-widget-social-icons:not(.elementor-grid-0):not(.elementor-grid-tablet-0):not(.elementor-grid-mobile-0) .elementor-grid {
+                                            display: inline-grid
+                                        }
+
+                                        .elementor-widget-social-icons .elementor-grid {
+                                            grid-column-gap: var(--grid-column-gap,5px);
+                                            grid-row-gap: var(--grid-row-gap,5px);
+                                            grid-template-columns: var(--grid-template-columns);
+                                            justify-content: var(--justify-content,center);
+                                            justify-items: var(--justify-content,center)
+                                        }
+
+                                        .elementor-icon.elementor-social-icon {
+                                            font-size: var(--icon-size,25px);
+                                            line-height: var(--icon-size,25px);
+                                            width: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, .5em));
+                                            height: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, .5em))
+                                        }
+
+                                        .elementor-social-icon {
+                                            --e-social-icon-icon-color: #fff;
+                                            display: inline-flex;
+                                            background-color: #69727d;
+                                            align-items: center;
+                                            justify-content: center;
+                                            text-align: center;
+                                            cursor: pointer
+                                        }
+
+                                            .elementor-social-icon i {
+                                                color: var(--e-social-icon-icon-color)
+                                            }
+
+                                            .elementor-social-icon svg {
+                                                fill: var(--e-social-icon-icon-color)
+                                            }
+
+                                            .elementor-social-icon:last-child {
+                                                margin: 0
+                                            }
+
+                                            .elementor-social-icon:hover {
+                                                opacity: .9;
+                                                color: #fff
+                                            }
+
+                                        .elementor-social-icon-android {
+                                            background-color: #a4c639
+                                        }
+
+                                        .elementor-social-icon-apple {
+                                            background-color: #999
+                                        }
+
+                                        .elementor-social-icon-behance {
+                                            background-color: #1769ff
+                                        }
+
+                                        .elementor-social-icon-bitbucket {
+                                            background-color: #205081
+                                        }
+
+                                        .elementor-social-icon-codepen {
+                                            background-color: #000
+                                        }
+
+                                        .elementor-social-icon-delicious {
+                                            background-color: #39f
+                                        }
+
+                                        .elementor-social-icon-deviantart {
+                                            background-color: #05cc47
+                                        }
+
+                                        .elementor-social-icon-digg {
+                                            background-color: #005be2
+                                        }
+
+                                        .elementor-social-icon-dribbble {
+                                            background-color: #ea4c89
+                                        }
+
+                                        .elementor-social-icon-elementor {
+                                            background-color: #d30c5c
+                                        }
+
+                                        .elementor-social-icon-envelope {
+                                            background-color: #ea4335
+                                        }
+
+                                        .elementor-social-icon-facebook, .elementor-social-icon-facebook-f {
+                                            background-color: #3b5998
+                                        }
+
+                                        .elementor-social-icon-flickr {
+                                            background-color: #0063dc
+                                        }
+
+                                        .elementor-social-icon-foursquare {
+                                            background-color: #2d5be3
+                                        }
+
+                                        .elementor-social-icon-free-code-camp, .elementor-social-icon-freecodecamp {
+                                            background-color: #006400
+                                        }
+
+                                        .elementor-social-icon-github {
+                                            background-color: #333
+                                        }
+
+                                        .elementor-social-icon-gitlab {
+                                            background-color: #e24329
+                                        }
+
+                                        .elementor-social-icon-globe {
+                                            background-color: #69727d
+                                        }
+
+                                        .elementor-social-icon-google-plus, .elementor-social-icon-google-plus-g {
+                                            background-color: #dd4b39
+                                        }
+
+                                        .elementor-social-icon-houzz {
+                                            background-color: #7ac142
+                                        }
+
+                                        .elementor-social-icon-instagram {
+                                            background-color: #262626
+                                        }
+
+                                        .elementor-social-icon-jsfiddle {
+                                            background-color: #487aa2
+                                        }
+
+                                        .elementor-social-icon-link {
+                                            background-color: #818a91
+                                        }
+
+                                        .elementor-social-icon-linkedin, .elementor-social-icon-linkedin-in {
+                                            background-color: #0077b5
+                                        }
+
+                                        .elementor-social-icon-medium {
+                                            background-color: #00ab6b
+                                        }
+
+                                        .elementor-social-icon-meetup {
+                                            background-color: #ec1c40
+                                        }
+
+                                        .elementor-social-icon-mixcloud {
+                                            background-color: #273a4b
+                                        }
+
+                                        .elementor-social-icon-odnoklassniki {
+                                            background-color: #f4731c
+                                        }
+
+                                        .elementor-social-icon-pinterest {
+                                            background-color: #bd081c
+                                        }
+
+                                        .elementor-social-icon-product-hunt {
+                                            background-color: #da552f
+                                        }
+
+                                        .elementor-social-icon-reddit {
+                                            background-color: #ff4500
+                                        }
+
+                                        .elementor-social-icon-rss {
+                                            background-color: #f26522
+                                        }
+
+                                        .elementor-social-icon-shopping-cart {
+                                            background-color: #4caf50
+                                        }
+
+                                        .elementor-social-icon-skype {
+                                            background-color: #00aff0
+                                        }
+
+                                        .elementor-social-icon-slideshare {
+                                            background-color: #0077b5
+                                        }
+
+                                        .elementor-social-icon-snapchat {
+                                            background-color: #fffc00
+                                        }
+
+                                        .elementor-social-icon-soundcloud {
+                                            background-color: #f80
+                                        }
+
+                                        .elementor-social-icon-spotify {
+                                            background-color: #2ebd59
+                                        }
+
+                                        .elementor-social-icon-stack-overflow {
+                                            background-color: #fe7a15
+                                        }
+
+                                        .elementor-social-icon-steam {
+                                            background-color: #00adee
+                                        }
+
+                                        .elementor-social-icon-stumbleupon {
+                                            background-color: #eb4924
+                                        }
+
+                                        .elementor-social-icon-telegram {
+                                            background-color: #2ca5e0
+                                        }
+
+                                        .elementor-social-icon-thumb-tack {
+                                            background-color: #1aa1d8
+                                        }
+
+                                        .elementor-social-icon-tripadvisor {
+                                            background-color: #589442
+                                        }
+
+                                        .elementor-social-icon-tumblr {
+                                            background-color: #35465c
+                                        }
+
+                                        .elementor-social-icon-twitch {
+                                            background-color: #6441a5
+                                        }
+
+                                        .elementor-social-icon-twitter {
+                                            background-color: #1da1f2
+                                        }
+
+                                        .elementor-social-icon-viber {
+                                            background-color: #665cac
+                                        }
+
+                                        .elementor-social-icon-vimeo {
+                                            background-color: #1ab7ea
+                                        }
+
+                                        .elementor-social-icon-vk {
+                                            background-color: #45668e
+                                        }
+
+                                        .elementor-social-icon-weibo {
+                                            background-color: #dd2430
+                                        }
+
+                                        .elementor-social-icon-weixin {
+                                            background-color: #31a918
+                                        }
+
+                                        .elementor-social-icon-whatsapp {
+                                            background-color: #25d366
+                                        }
+
+                                        .elementor-social-icon-wordpress {
+                                            background-color: #21759b
+                                        }
+
+                                        .elementor-social-icon-xing {
+                                            background-color: #026466
+                                        }
+
+                                        .elementor-social-icon-yelp {
+                                            background-color: #af0606
+                                        }
+
+                                        .elementor-social-icon-youtube {
+                                            background-color: #cd201f
+                                        }
+
+                                        .elementor-social-icon-500px {
+                                            background-color: #0099e5
+                                        }
+
+                                        .elementor-shape-rounded .elementor-icon.elementor-social-icon {
+                                            border-radius: 10%
+                                        }
+
+                                        .elementor-shape-circle .elementor-icon.elementor-social-icon {
+                                            border-radius: 50%
+                                        }
+                                    </style>
+                                    <div class="elementor-social-icons-wrapper elementor-grid"><span class="elementor-grid-item"><a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-a862d2d" href="https://www.linkedin.com/company/south-hampshire-college-group/" target="_blank"><span class="elementor-screen-only">Linkedin-in</span> <i class="fab fa-linkedin-in"></i></a></span><span class="elementor-grid-item"><a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-repeater-item-b5863a5" href="https://www.facebook.com/SHCollegeGroup" target="_blank"><span class="elementor-screen-only">Facebook-f</span> <i class="fab fa-facebook-f"></i></a></span><span class="elementor-grid-item"><a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-bb9f6f6" href="https://twitter.com/SHCollegeGroup" target="_blank"><span class="elementor-screen-only">Twitter</span> <i class="fab fa-twitter"></i></a></span><span class="elementor-grid-item"><a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-64accf6" href="https://www.instagram.com/shcollegegroup/" target="_blank"><span class="elementor-screen-only">Instagram</span> <i class="fab fa-instagram"></i></a></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-5beaadb e-con-full e-flex e-con e-child" data-id="5beaadb" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                        <div data-particle_enable="false" data-particle-mobile-disabled="false" class="elementor-element elementor-element-a64e8a5 e-con-full e-flex e-con e-child" data-id="a64e8a5" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;full&quot;}">
+                            <div class="elementor-element elementor-element-37abbf9 elementor-icon-list--layout-inline elementor-align-center elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="37abbf9" data-element_type="widget" data-widget_type="icon-list.default">
+                                <div class="elementor-widget-container">
+                                    <link rel="stylesheet" href="./support-css-js/widget-icon-list.min.css">
+                                    <ul class="elementor-icon-list-items elementor-inline-items">
+                                        <li class="elementor-icon-list-item elementor-inline-item"><span class="elementor-icon-list-text"> &copy; South Hampshire College Group <span id="year">2024</span>.</span> <span class="elementor-icon-list-text">   </li>
+                                        <li class="elementor-icon-list-item elementor-inline-item"><a href="https://shcg.ac.uk/shcg_staging_mar/accessibility-statement/"><span class="elementor-icon-list-text">Accessibility Policy</span> </a></li>
+                                        <li class="elementor-icon-list-item elementor-inline-item"><a href="https://shcg.ac.uk/shcg_staging_mar/privacy-policy/"><span class="elementor-icon-list-text">Privacy Policy</span> </a></li>
+                                        <li class="elementor-icon-list-item elementor-inline-item"><a href="https://shcg.ac.uk/shcg_staging_mar/cookie-policy/"><span class="elementor-icon-list-text">Cookie Policy</span> </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <link rel="stylesheet" id="dce-style-css" href="./support-css-js/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="dce-dynamic-visibility-css" href="./support-css-js/dynamic-visibility.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="elementor-post-2633-css" href="./support-css-js/post-2633.css" type="text/css" media="all">
+    <link rel="stylesheet" id="e-animations-css" href="./support-css-js/animations.min.css" type="text/css" media="all">
+    <%--<script type="text/javascript" src="./support-css-js/core.min.js" id="jquery-ui-core-js"></script>--%>
+
+    <script type="text/javascript" src="./support-css-js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+    <script type="text/javascript" src="./support-css-js/hooks.min.js" id="wp-hooks-js"></script>
+    <script type="text/javascript" src="./support-css-js/vue.min.js" id="jet-vue-js"></script>
+
+
+    <script type="text/javascript" src="./support-css-js/jet-menu-public-scripts.js" id="jet-menu-public-scripts-js"></script>
+
+    <script type="text/javascript" id="eael-general-js-extra">
+        /* <![CDATA[ */
+        var localize = { "ajaxurl": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-admin\/admin-ajax.php", "nonce": "82c36be225", "i18n": { "added": "Added ", "compare": "Compare", "loading": "Loading..." }, "eael_translate_text": { "required_text": "is a required field", "invalid_text": "Invalid", "billing_text": "Billing", "shipping_text": "Shipping", "fg_mfp_counter_text": "of" }, "page_permalink": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/iframe-test\/", "cart_redirectition": "", "cart_page_url": "", "el_breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } }, "ParticleThemesData": { "default": "{\"particles\":{\"number\":{\"value\":160,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":true,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"repulse\"},\"onclick\":{\"enable\":true,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}", "nasa": "{\"particles\":{\"number\":{\"value\":250,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":1,\"random\":true,\"anim\":{\"enable\":true,\"speed\":1,\"opacity_min\":0,\"sync\":false}},\"size\":{\"value\":3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":4,\"size_min\":0.3,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":1,\"direction\":\"none\",\"random\":true,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":600}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":250,\"size\":0,\"duration\":2,\"opacity\":0,\"speed\":3},\"repulse\":{\"distance\":400,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}", "bubble": "{\"particles\":{\"number\":{\"value\":15,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#1b1e34\"},\"shape\":{\"type\":\"polygon\",\"stroke\":{\"width\":0,\"color\":\"#000\"},\"polygon\":{\"nb_sides\":6},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.3,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":50,\"random\":false,\"anim\":{\"enable\":true,\"speed\":10,\"size_min\":40,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":200,\"color\":\"#ffffff\",\"opacity\":1,\"width\":2},\"move\":{\"enable\":true,\"speed\":8,\"direction\":\"none\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":false,\"mode\":\"push\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}", "snow": "{\"particles\":{\"number\":{\"value\":450,\"density\":{\"enable\":true,\"value_area\":800}},\"color\":{\"value\":\"#fff\"},\"shape\":{\"type\":\"circle\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"img\/github.svg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":5,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":500,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":2},\"move\":{\"enable\":true,\"speed\":6,\"direction\":\"bottom\",\"random\":false,\"straight\":false,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":true,\"mode\":\"bubble\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":400,\"line_linked\":{\"opacity\":0.5}},\"bubble\":{\"distance\":400,\"size\":4,\"duration\":0.3,\"opacity\":1,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}", "nyan_cat": "{\"particles\":{\"number\":{\"value\":150,\"density\":{\"enable\":false,\"value_area\":800}},\"color\":{\"value\":\"#ffffff\"},\"shape\":{\"type\":\"star\",\"stroke\":{\"width\":0,\"color\":\"#000000\"},\"polygon\":{\"nb_sides\":5},\"image\":{\"src\":\"http:\/\/wiki.lexisnexis.com\/academic\/images\/f\/fb\/Itunes_podcast_icon_300.jpg\",\"width\":100,\"height\":100}},\"opacity\":{\"value\":0.5,\"random\":false,\"anim\":{\"enable\":false,\"speed\":1,\"opacity_min\":0.1,\"sync\":false}},\"size\":{\"value\":4,\"random\":true,\"anim\":{\"enable\":false,\"speed\":40,\"size_min\":0.1,\"sync\":false}},\"line_linked\":{\"enable\":false,\"distance\":150,\"color\":\"#ffffff\",\"opacity\":0.4,\"width\":1},\"move\":{\"enable\":true,\"speed\":14,\"direction\":\"left\",\"random\":false,\"straight\":true,\"out_mode\":\"out\",\"bounce\":false,\"attract\":{\"enable\":false,\"rotateX\":600,\"rotateY\":1200}}},\"interactivity\":{\"detect_on\":\"canvas\",\"events\":{\"onhover\":{\"enable\":false,\"mode\":\"grab\"},\"onclick\":{\"enable\":true,\"mode\":\"repulse\"},\"resize\":true},\"modes\":{\"grab\":{\"distance\":200,\"line_linked\":{\"opacity\":1}},\"bubble\":{\"distance\":400,\"size\":40,\"duration\":2,\"opacity\":8,\"speed\":3},\"repulse\":{\"distance\":200,\"duration\":0.4},\"push\":{\"particles_nb\":4},\"remove\":{\"particles_nb\":2}}},\"retina_detect\":true}" }, "eael_login_nonce": "5af05d1395", "eael_register_nonce": "da17e7854d", "eael_lostpassword_nonce": "bf9161f68c", "eael_resetpassword_nonce": "bbe9de6f42" };
+        /* ]]> */
+</script>
+    <script type="text/javascript" src="./support-css-js/general.min.js" id="eael-general-js"></script>
+    <script type="text/javascript" src="./support-css-js/jquery.smartmenus.min.js" id="smartmenus-js"></script>
+    <script type="text/javascript" src="./support-css-js/webpack-pro.runtime.min.js" id="elementor-pro-webpack-runtime-js"></script>
+    <script type="text/javascript" src="./support-css-js/webpack.runtime.min.js" id="elementor-webpack-runtime-js"></script>
+    <script type="text/javascript" src="./support-css-js/frontend-modules.min.js" id="elementor-frontend-modules-js"></script>
+    <script type="text/javascript" src="./support-css-js/i18n.min.js" id="wp-i18n-js"></script>
+    <script type="text/javascript" id="wp-i18n-js-after">
+        /* <![CDATA[ */
+        wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+        wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
+        /* ]]> */
+</script>
+    <script type="text/javascript" id="elementor-pro-frontend-js-before">
+        /* <![CDATA[ */
+        var ElementorProFrontendConfig = {
+            "ajaxurl": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-admin\/admin-ajax.php", "nonce": "d2c34eb217", "urls": { "assets": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-content\/plugins\/elementor-pro\/assets\/", "rest": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-json\/" }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } },
+            "facebook_sdk": { "lang": "en_GB", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" }
+        };
+        /* ]]> */
+</script>
+    <script type="text/javascript" src="./support-css-js/frontend.min.js" id="elementor-pro-frontend-js"></script>
+    <script type="text/javascript" src="./support-css-js/waypoints.min.js" id="elementor-waypoints-js"></script>
+    <script type="text/javascript" id="elementor-frontend-js-before">
+        /* <![CDATA[ */
+        var elementorFrontendConfig = {
+            "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } },
+            "version": "3.19.2", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "theme_builder_v2": true, "block_editor_assets_optimize": true, "ai-layout": true, "landing-pages": true, "e_image_loading_optimization": true, "e_global_styleguide": true, "page-transitions": true, "notes": true, "form-submissions": true, "e_scroll_snap": true }, "urls": { "assets": "https:\/\/shcg.ac.uk\/shcg_staging_mar\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [], "dynamicooo": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 6466, "title": "SHCG-Header-Footer", "excerpt": "", "featuredImage": false }
+        };
+        /* ]]> */
+</script>
+    <script type="text/javascript" src="./support-css-js/frontend(1).min.js" id="elementor-frontend-js"></script>
+    <span id="elementor-device-mode" class="elementor-screen-only"></span><span id="elementordevicemode" class="elementor-screen-only"></span>
+    <script type="text/javascript" src="./support-css-js/elements-handlers.min.js" id="pro-elements-handlers-js"></script>
+    <svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+    <svg style="display: none;" class="e-font-icon-svg-symbols"></svg>
+    <script type="text/javascript" src="./support-css-js/widgets-scripts.js" id="jet-menu-elementor-widgets-scripts-js"></script>
+    <script>
+        var mbMenuActive;
+        jQuery('#mb-mobile').click(function () {
+
+            if (jQuery('.mb-menu-top-level').hasClass('mb-centered')) {
+                jQuery('.mb-menu-top-level').removeClass('mb-centered');
+            } else {
+                jQuery('.mb-menu-top-level').addClass('mb-centered');
+            }
+            jQuery('.mb-menu-campuses, .mb-menu-centres, .mb-menu-events, .mb-menu-collegelife, .mb-menu-employers').removeClass('mb-centered');
+
+        });
+
+        jQuery('.mb-show-collegelife').click(function () {
+
+            jQuery('.mb-menu-collegelife').addClass('mb-centered');
+        });
+        jQuery('.mb-collegelife-back').click(function () {
+
+            jQuery('.mb-menu-collegelife').removeClass('mb-centered');
+        });
+
+        jQuery('.mb-show-campuses').click(function () {
+
+            jQuery('.mb-menu-campuses').addClass('mb-centered');
+        });
+
+        jQuery('.mb-show-centres').click(function () {
+
+            jQuery('.mb-menu-centres').addClass('mb-centered');
+        });
+        jQuery('.mb-show-events').click(function () {
+
+            jQuery('.mb-menu-events').addClass('mb-centered');
+        });
+        jQuery('.mb-centres-back').click(function () {
+
+            jQuery('.mb-menu-centres').removeClass('mb-centered');
+        });
+
+        jQuery('.mb-campuses-back').click(function () {
+            jQuery('.mb-menu-campuses').removeClass('mb-centered');
+        });
+        jQuery('.mb-events-back').click(function () {
+
+            jQuery('.mb-menu-events').removeClass('mb-centered');
+        });
+        jQuery('.mb-show-employers').click(function () {
+
+            jQuery('.mb-menu-employers').addClass('mb-centered');
+        });
+        jQuery('.mb-employers-back').click(function () {
+
+            jQuery('.mb-menu-employers').removeClass('mb-centered');
+        });
+
+        jQuery('.mb-menu-toplevel-back').click(function () {
+            jQuery('.mb-menu-top-level').removeClass('mb-centered');
+        });
+	</script>
+
+</body>
+</html>

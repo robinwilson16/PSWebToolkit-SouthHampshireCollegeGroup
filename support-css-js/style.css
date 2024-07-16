@@ -1,0 +1,630 @@
+/* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+@import url("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role=list], ol[role=list] {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+} /* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+*/
+/*MEDIA QUERIES*/
+/*EXAMPLE
+.header-title {  
+   font-size: 2rem;
+   @include for-size(phone-only) {    
+      font-size: 1rem; 
+   }
+}
+*/
+/* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+*/
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Display .svg on front end: https://mariushosting.com/how-to-upload-svg-images-on-wordpress/*/
+img[src$=".svg"] {
+  width: auto;
+  height: auto;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  text-rendering: optimizeLegibility;
+  direction: ltr;
+}
+
+/*Inherit color from parent:
+This stops mobile devices from changing the colour of the on click text (EG: Phone Numbers)*/
+a[href^=tel] {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*Below fixes the left and right alignment of images so that text correctly
+wraps around the image (this applies to anything with a WYSIWYG editor)*/
+@media (min-width: 1024px) {
+  .alignleft {
+    float: left !important;
+    text-align: center !important;
+    margin-right: 10px;
+  }
+  .alignright {
+    float: right !important;
+    text-align: center !important;
+    margin-left: 10px;
+  }
+  .aligncenter {
+    margin: auto !important;
+    text-align: center !important;
+  }
+}
+/*Scrollbars*/
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(196, 196, 196);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(237, 237, 237);
+}
+
+::-moz-scrollbar {
+  width: 7px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: rgb(196, 196, 196);
+  border-radius: 0;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+::-moz-scrollbar-track {
+  background-color: rgb(237, 237, 237);
+}
+
+::scrollbar {
+  width: 7px;
+}
+
+::scrollbar-thumb {
+  background-color: rgb(196, 196, 196);
+  border-radius: 0;
+}
+
+::scrollbar-thumb:hover {
+  background-color: rgb(196, 196, 196);
+}
+
+::scrollbar-track {
+  background-color: rgb(237, 237, 237);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  /*line-height:normal;*/
+}
+
+p, a, li, span {
+  /*line-height:normal;*/
+}
+
+/*GSAP INTEGRATION DEFAULT CHANGES*/
+.home h1 {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.home h1 > div {
+  position: relative;
+  margin: 0;
+}
+.home .split-parent {
+  overflow: hidden;
+}
+.home .split-child {
+  display: inline-block;
+}
+.home .text-heading {
+  width: 900px;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: 630px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 834px) {
+  .container {
+    max-width: 730px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 835px) and (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1800px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 2500px) {
+  .container {
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.aspect-image {
+  /*aspect-ratio:1/1;*/
+  aspect-ratio: 1;
+  inline-size: 80vw;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
+@media (orientation: landscape) {
+  .aspect-image {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit, "Open Sans", Arial, sans-serif;
+}
+
+p, a, li, span, li, small {
+  font-family: inherit, "Open Sans", Arial, sans-serif;
+}
+
+/* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+*/
+@media (max-width: 767px) {
+  #home-hero .elementor-background-overlay {
+    background-image: linear-gradient(0deg, black 63%, transparent 88%);
+  }
+}
+
+#home-college-blocks #city-college .city-college-image:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #429AD2;
+  z-index: 99;
+  mix-blend-mode: multiply;
+  content: "";
+  opacity: 0;
+}
+#home-college-blocks #city-college:hover .city-college-image:before {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+#home-college-blocks #city-college:hover .college-block-button .elementor-button {
+  background: #E6E6E6;
+}
+
+#eastleigh-college .eastleigh-college-image:before {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #205CA4;
+  mix-blend-mode: multiply;
+  z-index: 99;
+  content: "";
+}
+#eastleigh-college:hover .eastleigh-college-image:before {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+#eastleigh-college:hover .college-block-button .elementor-button {
+  background: #E6E6E6;
+}
+
+#fareham-college .fareham-college-image:before {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #53257A;
+  z-index: 99;
+  mix-blend-mode: multiply;
+  content: "";
+}
+#fareham-college:hover .fareham-college-image:before {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+#fareham-college:hover .college-block-button .elementor-button {
+  background: #E6E6E6;
+}
+
+#background-mask-v-shape {
+  -webkit-mask-image: url(/wp-content/uploads/2023/07/Mask-Group-28-1-e1690277230379.png);
+  mask-image: url(/wp-content/uploads/2023/07/Mask-Group-28-1-e1690277230379.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+#background-mask-n-shape {
+  -webkit-mask-image: url(/wp-content/uploads/2023/07/Mask-Group-31-e1690279409139.png);
+  mask-image: url(/wp-content/uploads/2023/07/Mask-Group-31-e1690279409139.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+#background-mask-contact {
+  -webkit-mask-image: url(/wp-content/uploads/2023/07/Group-31-e1690288860692.png);
+  mask-image: url(/wp-content/uploads/2023/07/Group-31-e1690288860692.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+
+#background-angle {
+	clip-path: polygon(calc(0% + 220px) 0%, 100% 0%, 100% 100%, calc(0% + 180px) 100%, 0% 50%);
+}
+/*Tablet*/
+@media only screen and (max-width: 1024px) {
+  #background-angle {
+	  clip-path: polygon(calc(1% + 200px) 0%, 100% 0%, 100% 100%, calc(0% + 200px) 100%, 10% 50%);
+	}
+}
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  #background-angle {
+	  clip-path: polygon(calc(0% + 46px) 0%, 100% 0%, 100% 100%, calc(100%) 100%, 5% 70%);
+	}
+}
+
+
+
+
+a {
+  -webkit-text-decoration-color: black !important;
+  text-decoration-color: black !important;
+}
+
+#contact-form .elementor-field-option {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+#contact-form .elementor-field-option input {
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+}
+
+.page-numbers.next {
+  background: black;
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 5px;
+}
+
+#footer-menu a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a {
+  color: #454444;
+}
+
+#policies-tabs .eael-tabs-nav > ul {
+  align-items: flex-start;
+}
+#policies-tabs .eael-tabs-nav li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cky-consent-container .cky-consent-bar, .pojo-a11y-toolbar-inner, .cky-preference-center {
+  font-family: "Inter" !important;
+}
+
+/*Card and List Item options for WooCommerce*/
+ul.list_card_items {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  justify-items: flex-end;
+  float: right;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  ul.list_card_items {
+    float: right;
+    margin-right: 20px;
+  }
+}
+ul.list_card_items li {
+  margin-right: 20px;
+}
+ul.list_card_items li:last-child {
+  margin-right: 0;
+}
+ul.list_card_items li span {
+  cursor: pointer;
+}
+ul.list_card_items li span i {
+  font-size: 30px;
+  color: black;
+}
+ul.list_card_items li span:hover i {
+  color: #3d3d3d;
+}
+ul.list_card_items li.active_item span i {
+  color: #0F65A8;
+}
+ul.list_card_items li.active_item span:hover i {
+  opacity: 0.8;
+}
+ul.products.columns-3.dt_list_items {
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-areas: "product_item product_item product_item";
+  grid-template-rows: repeat(5, 1fr) !important;
+  display: block !important;
+  gap: 0px 30px;
+}
+ul.products.columns-3.dt_list_items li {
+  grid-area: product_item;
+  display: grid;
+  grid-template-areas: "image_element image_element item_cta";
+  align-items: center;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+  border: 1px solid #cccccc;
+  float: unset;
+  grid-template-columns: 1fr 1fr 200px;
+  width: 100% !important;
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li {
+    grid-template-areas: "image_element image_element image_element";
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100% !important;
+  }
+}
+ul.products.columns-3.dt_list_items li .onsale {
+  top: -14px;
+  right: unset;
+  left: -20px;
+  border-radius: 0;
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link {
+  grid-area: image_element;
+  display: grid !important;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "main_img prod_title" "main_img prod_price";
+  align-items: center;
+  grid-template-rows: min-content;
+  /* justify-content: flex-end; */
+  /*text-align:left !important;*/
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link {
+    grid-template-columns: 100px 1fr;
+    gap: 10px 30px;
+  }
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link img {
+  grid-area: main_img;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link h2 {
+  grid-area: prod_title;
+  align-self: flex-end;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link h2 {
+    font-size: 20px;
+  }
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link span.price {
+  grid-area: prod_price;
+  font-size: 20px;
+  font-weight: bold;
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link span.price span.woocommerce-Price-amount {
+  margin-top: 0;
+}
+ul.products.columns-3.dt_list_items li a.woocommerce-LoopProduct-link span.price small {
+  font-weight: 300;
+  font-size: 16px;
+}
+ul.products.columns-3.dt_list_items li a.button {
+  grid-area: item_cta;
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li a.button {
+    display: none;
+  }
+}
+ul.products.columns-3.dt_list_items li.product-category a {
+  grid-area: image_element;
+  display: grid !important;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas: "main_img prod_title";
+  align-items: center;
+  grid-template-rows: min-content;
+  /* justify-content: flex-end; */
+  /*text-align:left !important;*/
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li.product-category a {
+    grid-template-columns: 100px 1fr;
+    gap: 10px 30px;
+  }
+}
+ul.products.columns-3.dt_list_items li.product-category a img {
+  grid-area: main_img;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+ul.products.columns-3.dt_list_items li.product-category a h2 {
+  grid-area: prod_title;
+  align-self: center;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  ul.products.columns-3.dt_list_items li.product-category a h2 {
+    font-size: 20px;
+  }
+	
+	#footer-menu a{
+		width: 100%;
+		justify-content: center;
+	}
+}
+ul.products.columns-3.dt_list_items li.product-category a span.price {
+  grid-area: prod_price;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+ul.products.columns-3.dt_list_items li.product-category a span.price span.woocommerce-Price-amount {
+  margin-top: 0;
+}
+ul.products.columns-3.dt_list_items li.product-category a span.price small {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/*@import "sizes";*/

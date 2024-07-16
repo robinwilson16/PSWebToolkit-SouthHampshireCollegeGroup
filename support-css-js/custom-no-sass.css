@@ -1,0 +1,79 @@
+/* 
+    Created on : 08-DEC-2020 : 10:52
+    Author     : Marcus Iremonger
+    Version    : 1.0.0
+    URL:       : https://www.damteq.co.uk
+    NOTE       : USE THIS CSS FILE IF YOU NEED TO OVERRIDE SOMETHING BUT DONT HAVE
+                 ACCESS TO SCSS OR KNOW HOW TO USE IT.
+*/
+
+/*Adds envelope style effect here*/
+
+.searchandfilter ul {
+ 
+    padding: 0px;
+}
+
+.searchandfilter ul li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.searchandfilter ul {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    gap: 20px;
+	align-items: center;}
+
+.searchandfilter select.sf-input-select {
+    min-width: 170px;
+    padding: 5px;
+}
+
+
+/*New Header*/
+
+@media only screen and (min-width: 1024px) {
+    
+    #menu-container .jet-mega-menu-item__label,
+	#menu-container .elementor-button-text{
+		/*MB EDIT*/
+        /*font-size: clamp(.6rem, 1vw, .95rem)!important;*/
+    }
+	#menu-container .jet-mega-menu-item{
+    /*    margin:0 clamp(0px, 0.75vw, 12px)!important*/
+    }
+   /* #menu-container .jet-mega-menu-item-has-children{
+        margin-right:0!important;
+    }*/
+}
+#menu-container .jet-mega-menu-item__dropdown i{
+	position: relative;
+    top: -4px;
+}
+#menu-container .jet-mega-menu-sub-menu .jet-mega-menu-sub-menu__list{
+    padding:10px!important;
+}
+
+#menu-container .jet-mega-menu-item__title:after{
+    content:'';
+    height:3px;
+    width:0px;
+    background-color:#93BFE8;
+    transition:ease all 0.3s;
+    /*left:clamp(0px, .75vw, 15px);*/
+    position: relative;
+    opacity:0;
+    top:3px;
+}
+
+#menu-container .jet-mega-menu-item__inner:hover .jet-mega-menu-item__title:after{
+    content:'';
+    height:3px;
+    width:100%;
+    background-color:#93BFE8;
+    transition:ease all 0.3s;
+    opacity:1;
+}
